@@ -58,6 +58,11 @@
     ],
     "relationships": {
         "requires": [{
+            "id": "pf2e",
+            "type": "system",
+            "manifest": "https://github.com/foundryvtt/pf2e/releases/latest/download/system.json"
+        },
+        {
             "id": "about-time",
             "type": "module",
             "manifest": "https://gitlab.com/tposney/about-time/raw/master/package/module.json"
@@ -66,6 +71,11 @@
             "id": "foundryvtt-simple-calendar",
             "type": "module",
             "manifest": "https://github.com/vigoren/foundryvtt-simple-calendar/releases/latest/download/module.json"
+        },
+        {
+            "id": "monks-active-tiles",
+            "type": "module",
+            "manifest": "https://github.com/ironmonk88/monks-active-tiles/releases/latest/download/module.json"
         },
         {
             "id": "smalltime",
