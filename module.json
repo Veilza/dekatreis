@@ -1,5 +1,5 @@
 {
-    "id": "Dekatreis",
+    "id": "dekatreis",
     "name": "Dekatreis",
     "title": "Dekatreis",
     "description": "A campaign setting for the Pathfinder 2 system, created by Veilza Kinsemi.",
@@ -16,66 +16,63 @@
         "minimum": "10",
         "verified": "10"
     },
+    "system": ["pf2e"],
     "packs": [
         {
-            "name": "module-creatures",
-            "label": "Module Creatures",
+            "name": "dekatreis-creatures",
+            "label": "Dekatreis Creatures",
             "path": "./packs/creatures.db",
             "entity": "Actor",
             "type": "Actor",
             "system": "dnd5e"
         },
         {
-            "name": "module-items",
-            "label": "Module Items",
+            "name": "dekatreis-items",
+            "label": "Dekatreis Items",
             "path": "./packs/items.db",
             "entity": "Item",
             "type": "Item",
             "system": "dnd5e"
         },
         {
-            "name": "module-scenes",
-            "label": "Module Scenes",
+            "name": "dekatreis-scenes",
+            "label": "Dekatreis Scenes",
             "path": "./packs/scenes.db",
             "entity": "Scene",
             "type": "Scene"
         },
         {
-            "name": "module-journal-entries",
-            "label": "Module Journal Entries",
+            "name": "dekatreis-journal-entries",
+            "label": "Dekatreis Journal Entries",
             "path": "./packs/journal-entries.db",
             "entity": "JournalEntry",
             "type": "JournalEntry"
         },
         {
-            "name": "module-macros",
-            "label": "Module Macros",
-            "path": "./packs/macros.db",
-            "entity": "Macro",
-            "type": "Macro"
-        },
-        {
-            "name": "module-roll-tables",
-            "label": "Module Roll Tables",
-            "path": "./packs/roll-tables.db",
-            "entity": "RollTable",
-            "type": "RollTable"
-        },
-        {
-            "name": "module-playlists",
-            "label": "Module Playlists",
-            "path": "./packs/playlists.db",
-            "entity": "Playlist",
-            "type": "Playlist"
-        },
-        {
-            "name": "module-adventures",
-            "label": "Module Adventures",
+            "name": "dekatreis-adventure",
+            "label": "Dekatreis (Adventure Import)",
             "path": "./packs/adventures.db",
             "entity": "Adventure",
             "type": "Adventure"
         }
     ],
+    "relationships": {
+        "requires": [{
+            "id": "about-time",
+            "type": "module",
+            "manifest": "https://gitlab.com/tposney/about-time/raw/master/package/module.json"
+        },
+        {
+            "id": "foundryvtt-simple-calendar",
+            "type": "module",
+            "manifest": "https://github.com/vigoren/foundryvtt-simple-calendar/releases/latest/download/module.json"
+        },
+        {
+            "id": "smalltime",
+            "type": "module",
+            "manifest": "https://github.com/unsoluble/smalltime/releases/latest/download/module.json"
+        }]
+    },
     "manifest": "https://gitlab.com/encounterlibrary/my-content-module/-/raw/main/module.json",
     "download": "https://gitlab.com/encounterlibrary/my-content-module/-/raw/main/my-content-module.zip"
   }
