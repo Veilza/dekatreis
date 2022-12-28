@@ -22,41 +22,40 @@
     "system": ["pf2e"],
     "packs": [
         {
-            "name": "dekatreis-creatures",
-            "label": "Dekatreis Creatures",
-            "path": "./packs/creatures.db",
-            "entity": "Actor",
-            "type": "Actor",
-            "system": "dnd5e"
+            "name": "dekatreis-adventure",
+            "label": "Dekatreis (Adventure Import)",
+            "path": "./packs/dekatreis-adventure.db",
+            "entity": "Adventure",
+            "type": "Adventure"
         },
         {
-            "name": "dekatreis-items",
-            "label": "Dekatreis Items",
-            "path": "./packs/items.db",
+            "name": "dekatreis-player-options",
+            "label": "Dekatreis Player Options",
+            "path": "./packs/dekatreis-player-options.db",
             "entity": "Item",
             "type": "Item",
-            "system": "dnd5e"
+            "system": "pf2e"
         },
         {
-            "name": "dekatreis-scenes",
-            "label": "Dekatreis Scenes",
-            "path": "./packs/scenes.db",
-            "entity": "Scene",
-            "type": "Scene"
-        },
-        {
-            "name": "dekatreis-journal-entries",
-            "label": "Dekatreis Journal Entries",
-            "path": "./packs/journal-entries.db",
+            "name": "dekatreis-deities",
+            "label": "Dekatreis Deities",
+            "path": "./packs/dekatreis-deities.db",
             "entity": "JournalEntry",
             "type": "JournalEntry"
         },
         {
-            "name": "dekatreis-adventure",
-            "label": "Dekatreis (Adventure Import)",
-            "path": "./packs/adventures.db",
-            "entity": "Adventure",
-            "type": "Adventure"
+            "name": "dekatreis-handouts",
+            "label": "Dekatreis Handouts",
+            "path": "./packs/dekatreis-handouts.db",
+            "entity": "JournalEntry",
+            "type": "JournalEntry"
+        },
+        {
+            "name": "dekatreis-npc-handours",
+            "label": "Dekatreis NPC Handouts",
+            "path": "./packs/dekatreis-npc-handouts.db",
+            "entity": "JournalEntry",
+            "type": "JournalEntry"
         }
     ],
     "relationships": {
