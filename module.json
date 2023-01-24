@@ -1,90 +1,99 @@
 {
-    "id": "dekatreis",
-    "name": "Dekatreis",
-    "title": "Dekatreis",
-    "description": "A campaign setting for the Pathfinder 2 system, created by Veilza Kinsemi.",
-    "version": "1.0.6",
-    "authors": [
-        {
-            "name": "Veilza Kinsemi",
-            "url": "https://github.com/Veilza"
-        }
-    ],
-    "minimumCoreVersion": "10",
-    "compatibleCoreVersion": "10",
-    "compatibility": {
-        "minimum": "10",
-        "verified": "10"
+  "id": "dekatreis",
+  "title": "Dekatreis",
+  "description": "A campaign setting for the Pathfinder 2 system, created by Veilza Kinsemi.",
+  "version": "1.0.7",
+  "authors": [
+    {
+      "name": "Veilza Kinsemi",
+      "url": "https://github.com/Veilza",
+      "flags": {}
+    }
+  ],
+  "compatibility": {
+    "minimum": "10",
+    "verified": "10"
+  },
+  "esmodules": [
+    "scripts/check-sc-data.js"
+  ],
+  "packs": [
+    {
+      "name": "dekatreis-adventure",
+      "label": "Dekatreis (Adventure Import)",
+      "path": "packs/dekatreis-adventure.db",
+      "type": "Adventure",
+      "private": false,
+      "flags": {}
     },
-    "esmodules": [
-        "scripts/check-sc-data.js"
-    ],
-    "system": ["pf2e"],
-    "packs": [
-        {
-            "name": "dekatreis-adventure",
-            "label": "Dekatreis (Adventure Import)",
-            "path": "./packs/dekatreis-adventure.db",
-            "entity": "Adventure",
-            "type": "Adventure"
-        },
-        {
-            "name": "dekatreis-player-options",
-            "label": "Dekatreis Player Options",
-            "path": "./packs/dekatreis-player-options.db",
-            "entity": "Item",
-            "type": "Item",
-            "system": "pf2e"
-        },
-        {
-            "name": "dekatreis-deities",
-            "label": "Dekatreis Deities",
-            "path": "./packs/dekatreis-deities.db",
-            "entity": "JournalEntry",
-            "type": "JournalEntry"
-        },
-        {
-            "name": "dekatreis-handouts",
-            "label": "Dekatreis Handouts",
-            "path": "./packs/dekatreis-handouts.db",
-            "entity": "JournalEntry",
-            "type": "JournalEntry"
-        },
-        {
-            "name": "dekatreis-npc-handours",
-            "label": "Dekatreis NPC Handouts",
-            "path": "./packs/dekatreis-npc-handouts.db",
-            "entity": "JournalEntry",
-            "type": "JournalEntry"
-        }
-    ],
-    "relationships": {
-        "requires": [{
-            "id": "pf2e",
-            "type": "system",
-            "manifest": "https://github.com/foundryvtt/pf2e/releases/latest/download/system.json"
-        },
-        {
-            "id": "about-time",
-            "type": "module",
-            "manifest": "https://gitlab.com/tposney/about-time/raw/master/package/module.json"
-        },
-        {
-            "id": "foundryvtt-simple-calendar",
-            "type": "module",
-            "manifest": "https://github.com/vigoren/foundryvtt-simple-calendar/releases/latest/download/module.json"
-        },
-        {
-            "id": "monks-active-tiles",
-            "type": "module",
-            "manifest": "https://github.com/ironmonk88/monks-active-tiles/releases/latest/download/module.json"
-        },
-        {
-            "id": "smalltime",
-            "type": "module",
-            "manifest": "https://github.com/unsoluble/smalltime/releases/latest/download/module.json"
-        }]
+    {
+      "name": "dekatreis-player-options",
+      "label": "Dekatreis Player Options",
+      "path": "packs/dekatreis-player-options.db",
+      "type": "Item",
+      "system": "pf2e",
+      "private": false,
+      "flags": {}
     },
-    "manifest": "https://github.com/Veilza/dekatreis/releases/latest/download/module.json",
-    "download": "https://github.com/Veilza/dekatreis/releases/latest/download/dekatreis.zip"
-  }
+    {
+      "name": "dekatreis-deities",
+      "label": "Dekatreis Deities",
+      "path": "packs/dekatreis-deities.db",
+      "type": "JournalEntry",
+      "private": false,
+      "flags": {}
+    },
+    {
+      "name": "dekatreis-handouts",
+      "label": "Dekatreis Handouts",
+      "path": "packs/dekatreis-handouts.db",
+      "type": "JournalEntry",
+      "private": false,
+      "flags": {}
+    },
+    {
+      "name": "dekatreis-npc-handours",
+      "label": "Dekatreis NPC Handouts",
+      "path": "packs/dekatreis-npc-handouts.db",
+      "type": "JournalEntry",
+      "private": false,
+      "flags": {}
+    }
+  ],
+  "relationships": {
+    "requires": [
+      {
+        "id": "pf2e",
+        "type": "system",
+        "manifest": "https://github.com/foundryvtt/pf2e/releases/latest/download/system.json",
+        "compatibility": {}
+      },
+      {
+        "id": "about-time",
+        "type": "module",
+        "manifest": "https://gitlab.com/tposney/about-time/raw/master/package/module.json",
+        "compatibility": {}
+      },
+      {
+        "id": "foundryvtt-simple-calendar",
+        "type": "module",
+        "manifest": "https://github.com/vigoren/foundryvtt-simple-calendar/releases/latest/download/module.json",
+        "compatibility": {}
+      },
+      {
+        "id": "monks-active-tiles",
+        "type": "module",
+        "manifest": "https://github.com/ironmonk88/monks-active-tiles/releases/latest/download/module.json",
+        "compatibility": {}
+      },
+      {
+        "id": "smalltime",
+        "type": "module",
+        "manifest": "https://github.com/unsoluble/smalltime/releases/latest/download/module.json",
+        "compatibility": {}
+      }
+    ]
+  },
+  "manifest": "https://github.com/Veilza/dekatreis/releases/latest/download/module.json",
+  "download": "https://github.com/Veilza/dekatreis/releases/latest/download/dekatreis.zip"
+}
