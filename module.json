@@ -24,7 +24,8 @@
       "path": "packs/dekatreis-adventure.db",
       "type": "Adventure",
       "private": false,
-      "flags": {}
+      "flags": {},
+      "system": "pf2e"
     },
     {
       "name": "dekatreis-player-options",
@@ -41,7 +42,8 @@
       "path": "packs/dekatreis-deities.db",
       "type": "JournalEntry",
       "private": false,
-      "flags": {}
+      "flags": {},
+      "system": "pf2e"
     },
     {
       "name": "dekatreis-handouts",
@@ -49,7 +51,8 @@
       "path": "packs/dekatreis-handouts.db",
       "type": "JournalEntry",
       "private": false,
-      "flags": {}
+      "flags": {},
+      "system": "pf2e"
     },
     {
       "name": "dekatreis-npc-handours",
@@ -57,17 +60,23 @@
       "path": "packs/dekatreis-npc-handouts.db",
       "type": "JournalEntry",
       "private": false,
-      "flags": {}
+      "flags": {},
+      "system": "pf2e"
     }
   ],
   "relationships": {
-    "requires": [
+    "systems": [
       {
         "id": "pf2e",
-        "type": "system",
         "manifest": "https://github.com/foundryvtt/pf2e/releases/latest/download/system.json",
-        "compatibility": {}
-      },
+        "compatibility": {
+          "minimum": "4.7.4",
+          "verified": "4.7.4"
+        },
+        "type": "system"
+      }
+    ],
+    "requires": [
       {
         "id": "about-time",
         "type": "module",
