@@ -2,7 +2,7 @@
   "id": "dekatreis",
   "title": "Dekatreis",
   "description": "A campaign setting for the Pathfinder 2 system, created by Veilza Kinsemi.",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "authors": [
     {
       "name": "Veilza Kinsemi",
@@ -99,6 +99,12 @@
         "id": "smalltime",
         "type": "module",
         "manifest": "https://github.com/unsoluble/smalltime/releases/latest/download/module.json",
+        "compatibility": {}
+      },
+      {
+        "id": "fxmaster",
+        "type": "module",
+        "manifest": "https://github.com/ghost-fvtt/fxmaster/releases/latest/download/module.json",
         "compatibility": {}
       }
     ]
