@@ -76,5 +76,17 @@ Hooks.once("init", async function() {
         const result = await SimpleCalendar.api.configureCalendar(dekatreisCalendarData);
       }
     })
+
+    if(game.modules.get('smalltime').dateAvailable && !game.settings.get("smalltime", "sun-sync")) {
+      // Ensure that SmallTime syncs up with the Dekatreis calendar
+      game.settings.set("smalltime", "sun-sync", true)
+    }
   })
 })
+
+Hooks.on("renderPause", (app, html, options) => {
+  if (options.paused) {
+    // Set up a custom pause icon
+    html.find("img")[0].src = "/modules/dekatreis/assets/images/pause.webp"
+  }
+});
