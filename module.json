@@ -2,7 +2,7 @@
   "id": "dekatreis",
   "title": "Dekatreis",
   "description": "A campaign setting for the Pathfinder 2 system, created by Veilza Kinsemi.",
-  "version": "1.0.13",
+  "version": "1.0.14",
   "authors": [
     {
       "name": "Veilza Kinsemi",
@@ -58,13 +58,31 @@
       "system": "pf2e"
     },
     {
-      "name": "dekatreis-npc-handours",
+      "name": "dekatreis-npc-handouts",
       "label": "Dekatreis NPC Handouts",
       "path": "packs/dekatreis-npc-handouts.db",
       "type": "JournalEntry",
       "private": false,
       "flags": {},
       "system": "pf2e"
+    },
+    {
+      "label": "Token Page",
+      "type": "Scene",
+      "name": "dekatreis-token-page",
+      "path": "packs/dekatreis-token-page.db",
+      "system": "pf2e",
+      "private": true,
+      "flags": {}
+    },
+    {
+      "label": "Party Token",
+      "type": "Actor",
+      "name": "dekatreis-party-token",
+      "path": "packs/dekatreis-party-token.db",
+      "system": "pf2e",
+      "private": true,
+      "flags": {}
     }
   ],
   "relationships": {
