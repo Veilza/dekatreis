@@ -2,7 +2,7 @@
   "id": "dekatreis",
   "title": "Dekatreis",
   "description": "A campaign setting for the Pathfinder 2 system, created by Veilza Kinsemi.",
-  "version": "1.0.18",
+  "version": "1.0.19",
   "authors": [
     {
       "name": "Veilza Kinsemi",
@@ -43,7 +43,7 @@
       "name": "dekatreis-deities",
       "label": "Dekatreis Deities",
       "path": "packs/dekatreis-deities.db",
-      "type": "JournalEntry",
+      "type": "Item",
       "private": false,
       "flags": {},
       "system": "pf2e"
