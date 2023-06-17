@@ -2,7 +2,7 @@
   "id": "dekatreis",
   "title": "Dekatreis",
   "description": "A campaign setting for the Pathfinder 2 system, created by Veilza Kinsemi.",
-  "version": "1.0.19",
+  "version": "1.1.0",
   "authors": [
     {
       "name": "Veilza Kinsemi",
@@ -11,8 +11,8 @@
     }
   ],
   "compatibility": {
-    "minimum": "10",
-    "verified": "10"
+    "minimum": "11",
+    "verified": "11"
   },
   "esmodules": [
     "scripts/check-sc-data.js"
@@ -20,68 +20,92 @@
   "styles": [
     "styles/dekatreis.css"
   ],
+  "packFolders": [
+    {
+      "name": "Dekatreis",
+      "packs": ["player-options", "handouts", "npc-handouts", "deities", "world-import", "token-page", "party-token"]
+    }
+  ],
   "packs": [
     {
-      "name": "dekatreis-adventure",
-      "label": "Dekatreis (Adventure Import)",
-      "path": "packs/dekatreis-adventure.db",
-      "type": "Adventure",
-      "private": false,
-      "flags": {},
-      "system": "pf2e"
-    },
-    {
-      "name": "dekatreis-player-options",
-      "label": "Dekatreis Player Options",
-      "path": "packs/dekatreis-player-options.db",
+      "label": "Player Options",
       "type": "Item",
+      "name": "player-options",
+      "path": "packs/player-options",
       "system": "pf2e",
-      "private": false,
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
       "flags": {}
     },
     {
-      "name": "dekatreis-deities",
-      "label": "Dekatreis Deities",
-      "path": "packs/dekatreis-deities.db",
+      "label": "Handouts",
+      "type": "JournalEntry",
+      "name": "handouts",
+      "path": "packs/handouts",
+      "system": "pf2e",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    },
+    {
+      "label": "NPC Handouts",
+      "type": "JournalEntry",
+      "name": "npc-handouts",
+      "path": "packs/npc-handouts",
+      "system": "pf2e",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    },
+    {
+      "label": "Deities",
       "type": "Item",
-      "private": false,
-      "flags": {},
-      "system": "pf2e"
+      "name": "deities",
+      "path": "packs/deities",
+      "system": "pf2e",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
     },
     {
-      "name": "dekatreis-handouts",
-      "label": "Dekatreis Handouts",
-      "path": "packs/dekatreis-handouts.db",
-      "type": "JournalEntry",
-      "private": false,
-      "flags": {},
-      "system": "pf2e"
-    },
-    {
-      "name": "dekatreis-npc-handouts",
-      "label": "Dekatreis NPC Handouts",
-      "path": "packs/dekatreis-npc-handouts.db",
-      "type": "JournalEntry",
-      "private": false,
-      "flags": {},
-      "system": "pf2e"
+      "label": "World Import",
+      "type": "Adventure",
+      "name": "world-import",
+      "path": "packs/world-import",
+      "system": "pf2e",
+      "ownership": {
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
     },
     {
       "label": "Token Page",
       "type": "Scene",
-      "name": "dekatreis-token-page",
-      "path": "packs/dekatreis-token-page.db",
+      "name": "token-page",
+      "path": "packs/token-page",
       "system": "pf2e",
-      "private": true,
+      "ownership": {
+        "ASSISTANT": "OWNER"
+      },
       "flags": {}
     },
     {
       "label": "Party Token",
       "type": "Actor",
-      "name": "dekatreis-party-token",
-      "path": "packs/dekatreis-party-token.db",
+      "name": "party-token",
+      "path": "packs/party-token",
       "system": "pf2e",
-      "private": true,
+      "ownership": {
+        "ASSISTANT": "OWNER"
+      },
       "flags": {}
     }
   ],
@@ -91,8 +115,8 @@
         "id": "pf2e",
         "manifest": "https://github.com/foundryvtt/pf2e/releases/latest/download/system.json",
         "compatibility": {
-          "minimum": "4.7.4",
-          "verified": "4.7.4"
+          "minimum": "5.0.0-beta1",
+          "verified": "5.0.0-beta1"
         },
         "type": "system"
       }
