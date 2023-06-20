@@ -2,7 +2,7 @@
   "id": "dekatreis",
   "title": "Dekatreis",
   "description": "A techno-fantasy campaign setting for the Pathfinder 2 system, created by Veilza Kinsemi.",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "authors": [
     {
       "name": "Veilza",
@@ -28,90 +28,67 @@
   "packFolders": [
     {
       "name": "Dekatreis",
-      "packs": ["player-options", "handouts", "npc-handouts", "deities", "world-import", "token-page", "party-token"]
+      "packs": [
+        "player-options",
+        "handouts",
+        "npc-handouts",
+        "deities",
+        "world-import",
+        "token-page",
+        "party-token"
+      ],
+      "folders": []
     }
   ],
   "packs": [
     {
       "label": "Player Options",
-      "type": "Item",
       "name": "player-options",
-      "path": "packs/player-options",
+      "type": "Item",
       "system": "pf2e",
-      "ownership": {
-        "PLAYER": "OBSERVER",
-        "ASSISTANT": "OWNER"
-      },
-      "flags": {}
+      "path": "packs/player-options"
     },
     {
       "label": "Handouts",
-      "type": "JournalEntry",
       "name": "handouts",
-      "path": "packs/handouts",
+      "type": "JournalEntry",
       "system": "pf2e",
-      "ownership": {
-        "PLAYER": "OBSERVER",
-        "ASSISTANT": "OWNER"
-      },
-      "flags": {}
+      "path": "packs/handouts"
     },
     {
       "label": "NPC Handouts",
-      "type": "JournalEntry",
       "name": "npc-handouts",
-      "path": "packs/npc-handouts",
+      "type": "JournalEntry",
       "system": "pf2e",
-      "ownership": {
-        "PLAYER": "OBSERVER",
-        "ASSISTANT": "OWNER"
-      },
-      "flags": {}
+      "path": "packs/npc-handouts"
     },
     {
       "label": "Deities",
-      "type": "Item",
       "name": "deities",
-      "path": "packs/deities",
+      "type": "Item",
       "system": "pf2e",
-      "ownership": {
-        "PLAYER": "OBSERVER",
-        "ASSISTANT": "OWNER"
-      },
-      "flags": {}
+      "path": "packs/deities"
     },
     {
       "label": "World Import",
-      "type": "Adventure",
       "name": "world-import",
-      "path": "packs/world-import",
+      "type": "Adventure",
       "system": "pf2e",
-      "ownership": {
-        "ASSISTANT": "OWNER"
-      },
-      "flags": {}
+      "path": "packs/world-import"
     },
     {
       "label": "Token Page",
-      "type": "Scene",
       "name": "token-page",
-      "path": "packs/token-page",
+      "type": "Scene",
       "system": "pf2e",
-      "ownership": {
-        "ASSISTANT": "OWNER"
-      },
-      "flags": {}
+      "path": "packs/token-page"
     },
     {
       "label": "Party Token",
-      "type": "Actor",
       "name": "party-token",
-      "path": "packs/party-token",
+      "type": "Actor",
       "system": "pf2e",
-      "ownership": {
-        "ASSISTANT": "OWNER"
-      },
-      "flags": {}
+      "path": "packs/party-token"
     }
   ],
   "relationships": {
@@ -129,39 +106,29 @@
     "requires": [
       {
         "id": "about-time",
-        "type": "module",
-        "manifest": "https://gitlab.com/tposney/about-time/raw/master/package/module.json",
-        "compatibility": {}
+        "type": "module"
       },
       {
         "id": "foundryvtt-simple-calendar",
-        "type": "module",
-        "manifest": "https://github.com/vigoren/foundryvtt-simple-calendar/releases/latest/download/module.json",
-        "compatibility": {}
+        "type": "module"
       },
       {
         "id": "monks-active-tiles",
-        "type": "module",
-        "manifest": "https://github.com/ironmonk88/monks-active-tiles/releases/latest/download/module.json",
-        "compatibility": {}
+        "type": "module"
       },
       {
         "id": "smalltime",
-        "type": "module",
-        "manifest": "https://github.com/unsoluble/smalltime/releases/latest/download/module.json",
-        "compatibility": {}
+        "type": "module"
       },
       {
         "id": "fxmaster",
-        "type": "module",
-        "manifest": "https://github.com/ghost-fvtt/fxmaster/releases/latest/download/module.json",
-        "compatibility": {}
+        "type": "module"
       }
     ]
   },
   "manifest": "https://github.com/Veilza/dekatreis/releases/latest/download/module.json",
   "url": "https://github.com/veilza/dekatreis",
   "download": "https://github.com/Veilza/dekatreis/releases/latest/download/dekatreis.zip",
-	"readme": "https://github.com/veilza/dekatreis/blob/main/readme.md",
-	"changelog": "https://github.com/veilza/dekatreis/releases"
+  "readme": "https://github.com/veilza/dekatreis/blob/main/readme.md",
+  "changelog": "https://github.com/veilza/dekatreis/releases"
 }
