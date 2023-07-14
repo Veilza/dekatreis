@@ -120,5 +120,6 @@
   "url": "https://github.com/veilza/dekatreis",
   "download": "https://github.com/Veilza/dekatreis/releases/latest/download/dekatreis.zip",
   "readme": "https://github.com/veilza/dekatreis/blob/main/readme.md",
-  "changelog": "https://github.com/veilza/dekatreis/releases"
+  "changelog": "https://github.com/veilza/dekatreis/releases",
+  "license": "./LICENSE"
 }
