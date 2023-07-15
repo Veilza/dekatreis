@@ -2,12 +2,12 @@
   "id": "dekatreis",
   "title": "Dekatreis",
   "description": "A techno-fantasy campaign setting for the Pathfinder 2 system, created by Veilza Kinsemi.",
-  "version": "1.1.5",
+  "version": "1.1.6",
   "authors": [
     {
       "name": "Veilza",
-      "discord": "veilza",
-      "url": "https://github.com/Veilza"
+      "url": "https://github.com/Veilza",
+      "discord": "veilza"
     }
   ],
   "compatibility": {
@@ -37,82 +37,116 @@
   ],
   "packs": [
     {
-      "label": "Player Options",
       "name": "player-options",
+      "label": "Player Options",
+      "path": "packs/player-options",
       "type": "Item",
       "system": "pf2e",
-      "path": "packs/player-options"
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
     },
     {
-      "label": "Handouts",
       "name": "handouts",
+      "label": "Handouts",
+      "path": "packs/handouts",
       "type": "JournalEntry",
       "system": "pf2e",
-      "path": "packs/handouts"
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
     },
     {
-      "label": "NPC Handouts",
       "name": "npc-handouts",
+      "label": "NPC Handouts",
+      "path": "packs/npc-handouts",
       "type": "JournalEntry",
       "system": "pf2e",
-      "path": "packs/npc-handouts"
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
     },
     {
-      "label": "Deities",
       "name": "deities",
+      "label": "Deities",
+      "path": "packs/deities",
       "type": "Item",
       "system": "pf2e",
-      "path": "packs/deities"
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
     },
     {
-      "label": "World Import",
       "name": "world-import",
+      "label": "World Import",
+      "path": "packs/world-import",
       "type": "Adventure",
       "system": "pf2e",
-      "path": "packs/world-import"
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
     },
     {
-      "label": "Token Page",
       "name": "token-page",
+      "label": "Token Page",
+      "path": "packs/token-page",
       "type": "Scene",
       "system": "pf2e",
-      "path": "packs/token-page"
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
     },
     {
-      "label": "Party Token",
       "name": "party-token",
+      "label": "Party Token",
+      "path": "packs/party-token",
       "type": "Actor",
       "system": "pf2e",
-      "path": "packs/party-token"
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
     }
   ],
   "relationships": {
     "systems": [
       {
         "id": "pf2e",
-        "type": "system"
+        "type": "system",
+        "compatibility": {}
       }
     ],
     "requires": [
       {
         "id": "about-time",
-        "type": "module"
+        "type": "module",
+        "compatibility": {}
       },
       {
         "id": "foundryvtt-simple-calendar",
-        "type": "module"
+        "type": "module",
+        "compatibility": {}
       },
       {
         "id": "monks-active-tiles",
-        "type": "module"
+        "type": "module",
+        "compatibility": {}
       },
       {
         "id": "smalltime",
-        "type": "module"
+        "type": "module",
+        "compatibility": {}
       },
       {
         "id": "fxmaster",
-        "type": "module"
+        "type": "module",
+        "compatibility": {}
       }
     ]
   },
