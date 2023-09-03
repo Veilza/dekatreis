@@ -1,8 +1,15 @@
-2023/08/24-09:59:28.208 3c78 Recovering log #100
-2023/08/24-09:59:28.352 3c78 Delete type=0 #100
-2023/08/24-09:59:28.352 3c78 Delete type=3 #99
-2023/08/24-10:19:09.814 62c Level-0 table #104: started
-2023/08/24-10:19:09.814 62c Level-0 table #104: 0 bytes OK
-2023/08/24-10:19:09.873 62c Delete type=0 #102
-2023/08/24-10:19:09.939 62c Manual compaction at level-0 from '!journal!5ZDNRDXgHyg7q3Lk' @ 72057594037927935 : 1 .. '!journal.pages!zGEx6yESe6mHxJTJ.cFQ7mepgUCPBRKKU' @ 0 : 0; will stop at (end)
-2023/08/24-10:19:10.073 62c Manual compaction at level-1 from '!journal!5ZDNRDXgHyg7q3Lk' @ 72057594037927935 : 1 .. '!journal.pages!zGEx6yESe6mHxJTJ.cFQ7mepgUCPBRKKU' @ 0 : 0; will stop at (end)
+2023/09/03-14:18:31.550 1f28 Recovering log #110
+2023/09/03-14:18:31.776 1f28 Delete type=0 #110
+2023/09/03-14:18:31.776 1f28 Delete type=3 #109
+2023/09/03-15:49:06.586 29dc Level-0 table #114: started
+2023/09/03-15:49:06.657 29dc Level-0 table #114: 57368 bytes OK
+2023/09/03-15:49:06.704 29dc Delete type=0 #112
+2023/09/03-15:49:06.887 29dc Manual compaction at level-0 from '!journal!5ZDNRDXgHyg7q3Lk' @ 72057594037927935 : 1 .. '!journal.pages!zGEx6yESe6mHxJTJ.cFQ7mepgUCPBRKKU' @ 0 : 0; will stop at (end)
+2023/09/03-15:49:06.980 29dc Manual compaction at level-1 from '!journal!5ZDNRDXgHyg7q3Lk' @ 72057594037927935 : 1 .. '!journal.pages!zGEx6yESe6mHxJTJ.cFQ7mepgUCPBRKKU' @ 0 : 0; will stop at '!journal.pages!hUlKrv9yK8FEXs8F.zvAriURybWyCsdAG' @ 345 : 1
+2023/09/03-15:49:06.980 29dc Compacting 1@1 + 1@2 files
+2023/09/03-15:49:07.014 29dc Generated table #115@1: 62 keys, 87933 bytes
+2023/09/03-15:49:07.014 29dc Compacted 1@1 + 1@2 files => 87933 bytes
+2023/09/03-15:49:07.054 29dc compacted to: files[ 0 0 1 0 0 0 0 ]
+2023/09/03-15:49:07.054 29dc Delete type=2 #98
+2023/09/03-15:49:07.054 29dc Delete type=2 #114
+2023/09/03-15:49:07.055 29dc Manual compaction at level-1 from '!journal.pages!hUlKrv9yK8FEXs8F.zvAriURybWyCsdAG' @ 345 : 1 .. '!journal.pages!zGEx6yESe6mHxJTJ.cFQ7mepgUCPBRKKU' @ 0 : 0; will stop at (end)
