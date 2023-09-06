@@ -2,7 +2,7 @@
   "id": "dekatreis",
   "title": "Dekatreis",
   "description": "A techno-fantasy campaign setting for the Pathfinder 2 system, created by Veilza Kinsemi.",
-  "version": "1.1.8",
+  "version": "1.1.9",
   "authors": [
     {
       "name": "Veilza",
@@ -85,17 +85,6 @@
       "label": "World Import",
       "path": "packs/world-import",
       "type": "Adventure",
-      "system": "pf2e",
-      "ownership": {
-        "PLAYER": "OBSERVER",
-        "ASSISTANT": "OWNER"
-      }
-    },
-    {
-      "name": "token-page",
-      "label": "Token Page",
-      "path": "packs/token-page",
-      "type": "Scene",
       "system": "pf2e",
       "ownership": {
         "PLAYER": "OBSERVER",
