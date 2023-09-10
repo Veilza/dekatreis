@@ -2,7 +2,7 @@
   "id": "dekatreis",
   "title": "Dekatreis",
   "description": "A techno-fantasy campaign setting for the Pathfinder 2 system, created by Veilza Kinsemi.",
-  "version": "1.1.11",
+  "version": "1.1.12",
   "authors": [
     {
       "name": "Veilza",
@@ -30,7 +30,9 @@
         "deities",
         "world-import",
         "token-page",
-        "party-token"
+        "party-token",
+        "items",
+        "actors"
       ],
       "folders": []
     }
@@ -73,6 +75,27 @@
       "name": "deities",
       "label": "Deities",
       "path": "packs/deities",
+      "type": "Item",
+      "system": "pf2e",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "actors",
+      "label": "Actors",
+      "path": "packs/actors",
+      "type": "Actor",
+      "system": "pf2e",
+      "ownership": {
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "items",
+      "label": "Items",
+      "path": "packs/items",
       "type": "Item",
       "system": "pf2e",
       "ownership": {
