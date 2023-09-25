@@ -2,7 +2,7 @@
   "id": "dekatreis",
   "title": "Dekatreis",
   "description": "A techno-fantasy campaign setting for the Pathfinder 2 system, created by Veilza Kinsemi.",
-  "version": "1.1.15",
+  "version": "1.1.16",
   "authors": [
     {
       "name": "Veilza",
@@ -115,6 +115,36 @@
       }
     }
   ],
+  "flags": {
+    "dekatreis": {
+      "pf2e-homebrew": {
+        "featTraits": {
+          "dragonborn": {
+            "label": "Dragonborn",
+            "description": "Dragonborn are draconic humanoids that typically have powerful breath weapons or wings resembling the ones of true dragons."
+          },
+          "alepou": {
+            "label": "Alepou",
+            "description": "Alepou are vulpine humanoids who have innately strong magical abilities stemming from their tails."
+          },
+          "thyrosia": {
+            "label": "Thyrosia",
+            "description": "Thyrosia are humans with mammal traits that can range from animal appendages to fully furred."
+          }
+        },
+        "creatureTraits": {
+          "dragonborn": {
+            "label": "Dragonborn",
+            "description": "Dragonborn are draconic humanoids that typically have powerful breath weapons or wings resembling the ones of true dragons."
+          },
+          "alepou": {
+            "label": "Alepou",
+            "description": "Alepou are vulpine humanoids who have innately strong magical abilities stemming from their tails."
+          }
+        }
+      }
+    }
+  },
   "relationships": {
     "systems": [
       {
