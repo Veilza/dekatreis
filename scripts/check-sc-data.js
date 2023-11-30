@@ -41,7 +41,7 @@ const dekatreisCalendarData = {
         {"name":"Celestial Events","textColor":"#FFFFFF","color":"#8150e7"}
       ],
       "seasons": [
-        {"id":"2300a6c1","name":"Calm WInds","description":"","startingMonth":0,"startingDay":0,"color":"#ffffff","icon":"none","sunriseTime":0,"sunsetTime":45000},
+        {"id":"2300a6c1","name":"Calm Winds","description":"","startingMonth":0,"startingDay":0,"color":"#ffffff","icon":"none","sunriseTime":0,"sunsetTime":45000},
         {"id":"b5c6d407","name":"Nurturing Rains","description":"","startingMonth":2,"startingDay":0,"color":"#ffffff","icon":"none","sunriseTime":0,"sunsetTime":45000},
         {"id":"4bdf8554","name":"Bitter Storms","description":"","startingMonth":4,"startingDay":0,"color":"#ffffff","icon":"none","sunriseTime":0,"sunsetTime":45000},
         {"id":"74032e38","name":"Dangerous Waves","description":"","startingMonth":7,"startingDay":0,"color":"#ffffff","icon":"none","sunriseTime":0,"sunsetTime":45000},

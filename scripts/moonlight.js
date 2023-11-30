@@ -1,109 +1,47 @@
-import { extractLightingData } from "./data-model.js";
-import { LightingSystem } from "./lighting-system.js";
-import { parseColor } from "../utils/helpers.js";
+import { Helpers } from './helpers.js'
 
-Hooks.once("setup", () => {
-    if (game.settings.get("core", "noCanvas")) {
-        return;
-    }
+const coreDarknessColour = 2368584;
 
-    libWrapper.register(
-        "perfect-vision",
-        "CONFIG.Canvas.colorManager.prototype.initialize",
-        function (wrapped, colors = {}) {
-            const flags = canvas.scene.flags["perfect-vision"];
+const redMoonColour = "#c91d21";
+const silverMoonColour = "#b8b8b8";
+const blueMoonColour = "#0080ff";
 
-            colors.daylightColor = parseColor(flags?.daylightColor, colors.daylightColor ?? CONFIG.Canvas.daylightColor);
-            colors.darknessColor = parseColor(flags?.darknessColor, colors.darknessColor ?? CONFIG.Canvas.darknessColor);
+Hooks.on('init', () => {
+    Hooks.on('simple-calendar-date-time-change', (CurrentTimeData) => {
+        setMoonlight()
+    })
 
-            const result = wrapped(colors);
+    Hooks.on(SimpleCalendar.Hooks.Ready, () => {
+        setMoonlight()
+    })
+})
 
-            if (LightingSystem.instance.hasRegion("globalLight")
-                && LightingSystem.instance.updateRegion("globalLight", {
-                    darkness: this.darknessLevel,
-                    lightLevels: this.weights,
-                    daylightColor: this.colors.ambientDaylight.valueOf(),
-                    darknessColor: this.colors.ambientDarkness.valueOf(),
-                    brightestColor: this.colors.ambientBrightest.valueOf()
-                })) {
-                canvas.perception.update({ refreshLighting: true }, true);
-            }
+function setMoonlight() {
+    const currentCalendar = SimpleCalendar.api.getCurrentCalendar()
 
-            return result;
-        },
-        libWrapper.WRAPPER
-    );
+    if(SimpleCalendar.api.isPrimaryGM() && currentCalendar.id === "dekatreis"){
+        const currentHour = Math.floor((currentCalendar.currentDate.seconds / 60)/60)
 
-    Hooks.on("drawEffectsCanvasGroup", () => {
-        updateLighting({ defer: true });
-    });
+        // Set the global Darkness color to the color of the current moon, depending on the time.
+        if (currentHour >= 20) {
+            // Shift to red moon
+            const darknessColorFromRedMoon = Helpers.pSBC(-0.9, redMoonColour)
+            CONFIG.Canvas.darknessColor = darknessColorFromRedMoon
 
-    Hooks.on("updateScene", document => {
-        if (!document.isView) {
-            return;
+            canvas.colorManager.initialize()
+        } else if (currentHour >= 16) {
+            // Shift to silver moon
+            const darknessColorFromSilverMoon = Helpers.pSBC(-0.9, silverMoonColour)
+            CONFIG.Canvas.darknessColor = darknessColorFromSilverMoon
+            canvas.colorManager.initialize()
+        } else if (currentHour >= 12) {
+            // Shift to blue moon
+            const darknessColorFromBlueMoon = Helpers.pSBC(-0.9, blueMoonColour)
+            CONFIG.Canvas.darknessColor = darknessColorFromBlueMoon
+            canvas.colorManager.initialize()
+        } else {
+            CONFIG.Canvas.darknessColor = coreDarknessColour
+            canvas.colorManager.initialize()
         }
-
-        updateLighting();
-    });
-
-    if (game.modules.get("levels")?.active) {
-        function updateBackground() {
-            if (LightingSystem.instance.hasRegion("globalLight")
-                && LightingSystem.instance.updateRegion("globalLight", {
-                    active: isActive(),
-                    occluded: isOccluded()
-                })) {
-                canvas.perception.update({ refreshLighting: true }, true);
-            }
-        }
-
-        Hooks.on("updateToken", updateBackground);
-        Hooks.on("controlToken", updateBackground);
-        Hooks.on("levelsUiChangeLevel", updateBackground);
-        Hooks.on("renderLevelsUI", updateBackground);
-        Hooks.on("closeLevelsUI", updateBackground);
     }
-});
-
-export function updateLighting({ defer = false } = {}) {
-    let initializeLighting = false;
-    const data = extractLightingData(canvas.scene);
-
-    if (game.modules.get("levels")?.active) {
-        data.active = isActive();
-        data.occluded = isOccluded();
-        data.occlusionMode = CONST.TILE_OCCLUSION_MODES.FADE;
-    }
-
-    if (!LightingSystem.instance.hasRegion("globalLight")) {
-        LightingSystem.instance.createRegion("globalLight", data);
-
-        initializeLighting = true;
-    } else if (!LightingSystem.instance.updateRegion("globalLight", data)) {
-        defer = true;
-    }
-
-    canvas.colorManager.initialize();
-
-    if (!defer) {
-        canvas.perception.update({ initializeLighting, refreshLighting: true }, true);
-    }
-};
-
-function isActive() {
-    if (CONFIG.Levels.UI?.rangeEnabled && !canvas.tokens.controlled.length) {
-        return (parseFloat(CONFIG.Levels.UI.range?.[0]) ?? Infinity)
-            >= (canvas.primary.background?.elevation ?? PrimaryCanvasGroup.BACKGROUND_ELEVATION);
-    }
-
-    return true;
-}
-
-function isOccluded() {
-    if (canvas.tokens.controlled.length) {
-        return (CONFIG.Levels.currentToken ?? canvas.tokens.controlled[0]).losHeight
-            < (canvas.primary.background?.elevation ?? PrimaryCanvasGroup.BACKGROUND_ELEVATION);
-    }
-
-    return false;
 }
