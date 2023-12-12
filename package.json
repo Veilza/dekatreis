@@ -1,0 +1,17 @@
+{
+  "name": "dekatreis",
+  "version": "1.0.0",
+  "description": "Pack converter for Dekatreis.",
+  "scripts": {
+    "convert-packs": "fvtt package unpack -n Macros --inputDirectory ./packs/macros --outputDirectory ./packs/macros/_macros && fvtt package pack -n Macros --inputDirectory ./packs/macros/_macros --outputDirectory ./packs --nedb"
+  },
+  "browserslist": [
+    "last 3 versions"
+  ],
+  "author": "Veilza",
+  "license": "ORC",
+  "private": false,
+  "devDependencies": {
+    "@foundryvtt/foundryvtt-cli": "^1.0.2"
+  }
+}

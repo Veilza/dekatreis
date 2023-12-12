@@ -1,2 +1,19 @@
+# IDE
+.idea/
+.vs/
 
-*.zip
+# Node Modules
+node_modules/
+npm-debug.log
+
+# Local Linter Configs
+/.stylelintrc*
+/.htmlhintrc*
+/.eslintrc*
+
+# Pack files
+packs/*
+!*.db
+
+# Old Graphics
+assets/images/old/
