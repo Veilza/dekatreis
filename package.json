@@ -3,7 +3,16 @@
   "version": "1.0.0",
   "description": "Pack converter for Dekatreis.",
   "scripts": {
-    "convert-packs": "fvtt package unpack -n Macros --inputDirectory ./packs/macros --outputDirectory ./packs/macros/_macros && fvtt package pack -n Macros --inputDirectory ./packs/macros/_macros --outputDirectory ./packs --nedb"
+    "convert-packs": "npm run conv-actors && npm run conv-deities && npm run conv-handouts && npm run conv-items && npm run conv-npc-handouts && npm run conv-party-token && npm run conv-player-options && npm run conv-token-page && npm run conv-world-import",
+    "conv-actors": "fvtt package unpack -n Actors --inputDirectory ./packs/ --outputDirectory ./packs/unpacked/_actors && fvtt package pack -n Actors --inputDirectory ./packs/unpacked/_actors --outputDirectory ./packs --nedb",
+    "conv-deities": "fvtt package unpack -n Deities --inputDirectory ./packs/ --outputDirectory ./packs/unpacked/_deities && fvtt package pack -n Deities --inputDirectory ./packs/unpacked/_deities --outputDirectory ./packs --nedb",
+    "conv-handouts": "fvtt package unpack -n Handouts --inputDirectory ./packs/ --outputDirectory ./packs/unpacked/_handouts && fvtt package pack -n Handouts --inputDirectory ./packs/unpacked/_handouts --outputDirectory ./packs --nedb",
+    "conv-items": "fvtt package unpack -n Items --inputDirectory ./packs/ --outputDirectory ./packs/unpacked/_items && fvtt package pack -n Items --inputDirectory ./packs/unpacked/_items --outputDirectory ./packs --nedb",
+    "conv-npc-handouts": "fvtt package unpack -n NPC-Handouts --inputDirectory ./packs/ --outputDirectory ./packs/unpacked/_npchandouts && fvtt package pack -n NPC-Handouts --inputDirectory ./packs/unpacked/_npchandouts --outputDirectory ./packs --nedb",
+    "conv-party-token": "fvtt package unpack -n Party-Token --inputDirectory ./packs/ --outputDirectory ./packs/unpacked/_partytoken && fvtt package pack -n Party-Token --inputDirectory ./packs/unpacked/_partytoken --outputDirectory ./packs --nedb",
+    "conv-player-options": "fvtt package unpack -n Player-Options --inputDirectory ./packs/ --outputDirectory ./packs/unpacked/_playeroptions && fvtt package pack -n Player-Options --inputDirectory ./packs/unpacked/_playeroptions --outputDirectory ./packs --nedb",
+    "conv-token-page": "fvtt package unpack -n Token-Page --inputDirectory ./packs/ --outputDirectory ./packs/unpacked/_tokenpage && fvtt package pack -n Token-Page --inputDirectory ./packs/unpacked/_tokenpage --outputDirectory ./packs --nedb",
+    "conv-world-import": "fvtt package unpack -n World-Import --inputDirectory ./packs/ --outputDirectory ./packs/unpacked/_worldimport && fvtt package pack -n World-Import --inputDirectory ./packs/unpacked/_worldimport --outputDirectory ./packs --nedb"
   },
   "browserslist": [
     "last 3 versions"
