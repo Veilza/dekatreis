@@ -26,20 +26,34 @@ function setMoonlight() {
         if (currentHour >= 20) {
             // Shift to red moon
             const darknessColorFromRedMoon = Helpers.pSBC(-0.9, redMoonColour)
-            CONFIG.Canvas.darknessColor = darknessColorFromRedMoon
 
+            // We don't need to update anything if these are the same
+            if (CONFIG.Canvas.darknessColor === darknessColorFromRedMoon) return
+
+            CONFIG.Canvas.darknessColor = darknessColorFromRedMoon
             canvas.colorManager.initialize()
         } else if (currentHour >= 16) {
             // Shift to silver moon
             const darknessColorFromSilverMoon = Helpers.pSBC(-0.9, silverMoonColour)
+
+            // We don't need to update anything if these are the same
+            if (CONFIG.Canvas.darknessColor === darknessColorFromSilverMoon) return
+
             CONFIG.Canvas.darknessColor = darknessColorFromSilverMoon
             canvas.colorManager.initialize()
         } else if (currentHour >= 12) {
             // Shift to blue moon
             const darknessColorFromBlueMoon = Helpers.pSBC(-0.9, blueMoonColour)
+
+            // We don't need to update anything if these are the same
+            if (CONFIG.Canvas.darknessColor === darknessColorFromBlueMoon) return
+
             CONFIG.Canvas.darknessColor = darknessColorFromBlueMoon
             canvas.colorManager.initialize()
         } else {
+            if (CONFIG.Canvas.darknessColor === coreDarknessColour) return
+
+            // We don't need to update anything if these are the same
             CONFIG.Canvas.darknessColor = coreDarknessColour
             canvas.colorManager.initialize()
         }
