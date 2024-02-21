@@ -131,6 +131,18 @@
           "thyrosia": {
             "label": "Thyrosia",
             "description": "Thyrosia are humans with mammal traits that can range from animal appendages to fully furred."
+          },
+          "technological": {
+            "label": "Technological",
+            "description": "Actions and features with the technological trait are digital in nature or rely on technology to use."
+          },
+          "magitech": {
+            "label": "Magitech",
+            "description": "A magitech action or feature has both magical and technological traits. They are affected by any features or effects that would normally affect either magical or technological items."
+          },
+          "network": {
+            "label": "Network",
+            "description": "Actions and features with the Network trait cannot be used while outside of the range of one of a kingdom's magitech networks."
           }
         },
         "creatureTraits": {
@@ -141,6 +153,16 @@
           "alepou": {
             "label": "Alepou",
             "description": "Alepou are vulpine humanoids who have innately strong magical abilities stemming from their tails."
+          }
+        },
+        "equipmentTraits": {
+          "technological": {
+            "label": "Technological",
+            "description": "Items with the technological trait is mechanically crafted, and are not magical in nature."
+          },
+          "magitech": {
+            "label": "Magitech",
+            "description": "A magitech item has both magical and technological traits. They are affected by any features or effects that would normally affect either magical or technological items."
           }
         }
       }
