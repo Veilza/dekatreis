@@ -11,8 +11,8 @@
     }
   ],
   "compatibility": {
-    "minimum": "11",
-    "verified": "11"
+    "minimum": "12",
+    "verified": "12.327"
   },
   "esmodules": [
     "scripts/check-sc-data.js",
@@ -177,11 +177,6 @@
       }
     ],
     "requires": [
-      {
-        "id": "about-time",
-        "type": "module",
-        "compatibility": {}
-      },
       {
         "id": "foundryvtt-simple-calendar",
         "type": "module",
