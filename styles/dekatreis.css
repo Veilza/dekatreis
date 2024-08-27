@@ -1,3 +1,19 @@
 #pause img {
   --fa-animation-duration: 0s;
 }
+
+.actor.sheet section.window-content .currency .denomination.cp .currency-image {
+  background: url(/systems/pf2e/icons/equipment/treasure/currency/platinum-pieces.webp) no-repeat;
+}
+
+.actor.sheet section.window-content .currency .denomination.sp .currency-image {
+  background: url(/systems/pf2e/icons/equipment/treasure/currency/copper-pieces.webp) no-repeat;
+}
+
+.actor.sheet section.window-content .currency .denomination.gp .currency-image {
+  background: url(/systems/pf2e/icons/equipment/treasure/currency/gold-pieces.webp) no-repeat;
+}
+
+.actor.sheet section.window-content .currency .denomination.pp .currency-image {
+  background: url(/modules/dekatreis/assets/images/electrum-orb.webp) no-repeat;
+}

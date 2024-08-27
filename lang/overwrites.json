@@ -1,0 +1,14 @@
+{
+  "PF2E": {
+    "CurrencyAbbreviations": {
+      "cp": "ic",
+      "gp": "gc",
+      "pp": "eo",
+      "sp": "bc"
+    },
+    "CurrencyCP": "Iron Coin",
+    "CurrencyGP": "Gold Coin",
+    "CurrencyPP": "Electrum Orb",
+    "CurrencySP": "Bronze Coin"
+  }
+}
