@@ -12,7 +12,7 @@
   ],
   "compatibility": {
     "minimum": "13",
-    "verified": "13"
+    "verified": "13.344"
   },
   "esmodules": [
     "scripts/check-sc-data.js",
