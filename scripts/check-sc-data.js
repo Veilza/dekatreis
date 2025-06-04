@@ -84,9 +84,7 @@ Hooks.once("init", async function() {
   })
 })
 
-Hooks.on("renderPause", (app, html, options) => {
-  if (options.paused) {
-    // Set up a custom pause icon
-    html.find("img")[0].src = "/modules/dekatreis/assets/images/pause.webp"
-  }
+Hooks.on("renderGamePause", (app, html) => {
+  // Set up a custom pause icon
+  $(html).find("img")[0].src = "/modules/dekatreis/assets/images/pause.webp"
 });
