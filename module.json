@@ -2,7 +2,7 @@
   "id": "dekatreis",
   "title": "Dekatreis",
   "description": "A techno-fantasy campaign setting for the Pathfinder 2 system, created by Veilza Kinsemi.",
-  "version": "1.6.0",
+  "version": "1.6.1",
   "authors": [
     {
       "name": "Veilza",
@@ -12,12 +12,9 @@
   ],
   "compatibility": {
     "minimum": "13",
-    "verified": "13.344"
+    "verified": "13.346"
   },
-  "esmodules": [
-    "scripts/check-sc-data.js",
-    "scripts/moonlight.js"
-  ],
+  "esmodules": [],
   "styles": [
     "styles/dekatreis.css"
   ],
@@ -177,21 +174,6 @@
       }
     ],
     "requires": [
-      {
-        "id": "foundryvtt-simple-calendar",
-        "type": "module",
-        "compatibility": {}
-      },
-      {
-        "id": "monks-active-tiles",
-        "type": "module",
-        "compatibility": {}
-      },
-      {
-        "id": "smalltime",
-        "type": "module",
-        "compatibility": {}
-      },
       {
         "id": "fxmaster",
         "type": "module",
