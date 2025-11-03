@@ -1,7 +1,4 @@
 export const simpleTimekeepingData = {
-    "weatherLabel": "None",
-    "weatherColor": "#CCCCCC",
-    "dayColor": "#e2c018",
     "daysDisplay": "sinceEpoch",
     "showFullDate": true,
     "wideLetterSpacing": false,
@@ -12,16 +9,17 @@ export const simpleTimekeepingData = {
     "useCustomMoons": true,
     "useFullWidth": false,
     "latitude": 7,
-    "genWeather": "tempC",
     "hueIntensity": 0.3,
     "dawn": 0.23,
     "dusk": 0.77,
-    "secondsPerRealSecond": 10,
-    "secondsPerRound": 6,
-    "clockSeconds": 60,
     "hideExpired": true,
     "journalEntryEvents": "SimpleTimekeeping",
     "darknessSync": "sync",
+
+    // Time configuration
+    "secondsPerRealSecond": 10,
+    "secondsPerRound": 6,
+    "clockSeconds": 60,
 
     // Custom calendar data
     "calendar": "custom",
@@ -51,13 +49,24 @@ export const simpleTimekeepingData = {
     "season4": "#af9b18",
     "season5": "#209b9d",
 
+    // Other colors
+    "weatherColor": "#CCCCCC",
+    "dayColor": "#e2c018",
+
+    // Other labels
+    "weatherLabel": "Clear Skies",
+
     // Things to be modified on each update of the time
     //"moonTooltip": "",
     //"nightColor": "#3a4883",
     //"moonColor": "#CCCCCC",
     //"moonLabel": "",
 
-    // This changes per-campaign, and doesn't need to be changed every update
+    // These change per-campaign, and don't need to be changed every update
+
     // Below number is for the year 990 QY (390 * 30 * 989)
-    //"dayOffset": -385710
+    //"dayOffset": -385710,
+
+    // Weather doesn't always need to be on
+    //"genWeather": "tempC",
 }
