@@ -1,5 +1,14 @@
 import { simpleTimekeepingData } from "./simpletimekeeping-data.js"
+import { pSBCHelper } from "./psbc-helper.js"
 
+const coreDarknessColour = 2368584;
+const redMoonColour = "#c91d21";
+const silverMoonColour = "#b8b8b8";
+const blueMoonColour = "#0080ff";
+
+/**
+ * Set up listener hooks
+ */
 Hooks.on('ready', () => {
   if (isSimpleTimekeepingEnabled() && game.users.current.isActiveGM) {
     // Set the configuration of Simple Timekeeping on world ready
@@ -27,6 +36,7 @@ async function updateMoonData () {
   let color = ""
 
   if (hour >= 0 && hour < 12) {
+    // Day hours
     if (hour >= 0 && hour < 4) {
       label = "Dawn"
       color = "#CCCCCC"
@@ -38,17 +48,21 @@ async function updateMoonData () {
       color = "#CCCCCC"
     }
   } else {
+    // Night hours
     if (hour >= 12 && hour < 16) {
-      label = "Silver Moon 🌕"
-      color = "#c0c0c0"; // Silver color
-    } else if (hour >= 16 && hour < 20) {
       label = "Blue Moon 🔵"
-      color = "#0080ff"; // Blue color
+      color = blueMoonColour // Blue color
+    } else if (hour >= 16 && hour < 20) {
+      label = "Silver Moon 🌕"
+      color = silverMoonColour // Silver color
     } else {
       label = "Red Moon 🔴"
-      color = "#c91d21"; // Red color
+      color = redMoonColour // Red color
     }
   }
+
+  // Update the moonlight
+  setMoonlight(hour)
 
   // Set the moon badge in Simple Timekeeping
   if (ui.simpleTimekeeping?.setMoonBadge) {
@@ -60,4 +74,42 @@ async function updateMoonData () {
 
 function isSimpleTimekeepingEnabled () {
   return (game.modules.filter(module => module.id === 'simple-timekeeping').length > 0)
+}
+
+function setMoonlight (currentHour) {
+  // Set the global Darkness color to the color of the current moon, depending on the time.
+  if (currentHour >= 20) {
+    // Shift to red moon
+    const darknessColorFromRedMoon = pSBCHelper.RGBtoPSBC(-0.9, redMoonColour)
+
+    // We don't need to update anything if these are the same
+    if (CONFIG.Canvas.darknessColor === darknessColorFromRedMoon) return
+
+    CONFIG.Canvas.darknessColor = darknessColorFromRedMoon
+    canvas.environment.initialize()
+  } else if (currentHour >= 16) {
+    // Shift to silver moon
+    const darknessColorFromSilverMoon = pSBCHelper.RGBtoPSBC(-0.9, silverMoonColour)
+
+    // We don't need to update anything if these are the same
+    if (CONFIG.Canvas.darknessColor === darknessColorFromSilverMoon) return
+
+    CONFIG.Canvas.darknessColor = darknessColorFromSilverMoon
+    canvas.environment.initialize()
+  } else if (currentHour >= 12) {
+    // Shift to blue moon
+    const darknessColorFromBlueMoon = pSBCHelper.RGBtoPSBC(-0.9, blueMoonColour)
+
+    // We don't need to update anything if these are the same
+    if (CONFIG.Canvas.darknessColor === darknessColorFromBlueMoon) return
+
+    CONFIG.Canvas.darknessColor = darknessColorFromBlueMoon
+    canvas.environment.initialize()
+  } else {
+    if (CONFIG.Canvas.darknessColor === coreDarknessColour) return
+
+    // We don't need to update anything if these are the same
+    CONFIG.Canvas.darknessColor = coreDarknessColour
+    canvas.environment.initialize()
+  }
 }
