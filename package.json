@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Pack converter for Dekatreis.",
   "scripts": {
-    "convert-packs": "npm run conv-actors && npm run conv-deities && npm run conv-handouts && npm run conv-items && npm run conv-npc-handouts && npm run conv-player-options && npm run conv-world-import",
+    "convert-packs": "fvtt configure set dataPath D:/Programs/FoundryV13 && fvtt package workon dekatreis && npm run conv-actors && npm run conv-deities && npm run conv-handouts && npm run conv-items && npm run conv-npc-handouts && npm run conv-player-options && npm run conv-world-import",
     "conv-actors": "fvtt package unpack -n Actors --inputDirectory ./packs/ --outputDirectory ./packs/unpacked/_actors && fvtt package pack -n Actors --inputDirectory ./packs/unpacked/_actors --outputDirectory ./packs --nedb",
     "conv-deities": "fvtt package unpack -n Deities --inputDirectory ./packs/ --outputDirectory ./packs/unpacked/_deities && fvtt package pack -n Deities --inputDirectory ./packs/unpacked/_deities --outputDirectory ./packs --nedb",
     "conv-handouts": "fvtt package unpack -n Handouts --inputDirectory ./packs/ --outputDirectory ./packs/unpacked/_handouts && fvtt package pack -n Handouts --inputDirectory ./packs/unpacked/_handouts --outputDirectory ./packs --nedb",
