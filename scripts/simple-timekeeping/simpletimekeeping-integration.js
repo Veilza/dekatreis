@@ -11,9 +11,6 @@ const blueMoonColour = '#0080ff'
  */
 Hooks.on('ready', () => {
   if (isSimpleTimekeepingEnabled() && game.users.current.isActiveGM) {
-    // Set the 'First Time Setup Shown' to true, because we're modifying configuration for the user
-    if (game.settings.get('simple-timekeeping', 'firstTimeSetupShown')) game.settings.set('simple-timekeeping', 'firstTimeSetupShown', true)
-
     // Set the configuration of Simple Timekeeping on world ready
     const existingData = game.settings.get('simple-timekeeping', 'configuration')
     game.settings.set('simple-timekeeping', 'configuration', foundry.utils.mergeObject(existingData, simpleTimekeepingData))
