@@ -1,19 +1,22 @@
-import { simpleTimekeepingData } from "./simpletimekeeping-data.js"
-import { pSBCHelper } from "./psbc-helper.js"
+import { simpleTimekeepingData } from './simpletimekeeping-data.js'
+import { pSBCHelper } from './psbc-helper.js'
 
-const coreDarknessColour = 2368584;
-const redMoonColour = "#c91d21";
-const silverMoonColour = "#b8b8b8";
-const blueMoonColour = "#0080ff";
+const coreDarknessColour = 2368584
+const redMoonColour = '#c91d21'
+const silverMoonColour = '#b8b8b8'
+const blueMoonColour = '#0080ff'
 
 /**
  * Set up listener hooks
  */
 Hooks.on('ready', () => {
   if (isSimpleTimekeepingEnabled() && game.users.current.isActiveGM) {
+    // Set the 'First Time Setup Shown' to true, because we're modifying configuration for the user
+    if (game.settings.get('simple-timekeeping', 'firstTimeSetupShown')) game.settings.set('simple-timekeeping', 'firstTimeSetupShown', true)
+
     // Set the configuration of Simple Timekeeping on world ready
-    const existingData = game.settings.get("simple-timekeeping", "configuration")
-    game.settings.set("simple-timekeeping", "configuration", foundry.utils.mergeObject(existingData, simpleTimekeepingData))
+    const existingData = game.settings.get('simple-timekeeping', 'configuration')
+    game.settings.set('simple-timekeeping', 'configuration', foundry.utils.mergeObject(existingData, simpleTimekeepingData))
   }
 })
 
@@ -32,21 +35,21 @@ async function updateMoonData () {
   const hour = game.time.components.hour
 
   // Decide label and color
-  let label = ""
-  let color = ""
-  let tooltip = ""
+  let label = ''
+  let color = ''
+  let tooltip = ''
 
   if (hour >= 0 && hour < 12) {
     // Day hours
     if (hour >= 0 && hour < 4) {
-      label = "Dawn"
-      color = "#CCCCCC"
+      label = 'Dawn'
+      color = '#CCCCCC'
     } else if (hour >= 4 && hour < 8) {
-      label = "Afterdawn"
-      color = "#CCCCCC"
+      label = 'Afterdawn'
+      color = '#CCCCCC'
     } else {
-      label = "Dusk"
-      color = "#CCCCCC"
+      label = 'Dusk'
+      color = '#CCCCCC'
     }
   } else {
     // Night hours
@@ -81,7 +84,7 @@ async function updateMoonData () {
   if (ui.simpleTimekeeping?.setMoonBadge) {
     ui.simpleTimekeeping.setMoonBadge(label, color, tooltip)
   } else {
-    ui.notifications.error("Simple Timekeeping module not found or no setMoonBadge method.")
+    ui.notifications.error('Simple Timekeeping module not found or no setMoonBadge method.')
   }
 }
 
@@ -131,25 +134,25 @@ function setMoonlight (currentHour) {
 
 function getMoonPhaseDetails (moonIndex) {
   const phaseNames = [
-      "simple-timekeeping.moonPhase.new",
-      "simple-timekeeping.moonPhase.waxingCrescent",
-      "simple-timekeeping.moonPhase.firstQuarter",
-      "simple-timekeeping.moonPhase.waxingGibbous",
-      "simple-timekeeping.moonPhase.full",
-      "simple-timekeeping.moonPhase.waningGibbous",
-      "simple-timekeeping.moonPhase.lastQuarter",
-      "simple-timekeeping.moonPhase.waningCrescent"
+      'simple-timekeeping.moonPhase.new',
+      'simple-timekeeping.moonPhase.waxingCrescent',
+      'simple-timekeeping.moonPhase.firstQuarter',
+      'simple-timekeeping.moonPhase.waxingGibbous',
+      'simple-timekeeping.moonPhase.full',
+      'simple-timekeeping.moonPhase.waningGibbous',
+      'simple-timekeeping.moonPhase.lastQuarter',
+      'simple-timekeeping.moonPhase.waningCrescent'
   ]
 
   const MOON_PRESETS = [
-    { "label": "simple-timekeeping.moonPhase.new", "color": "#E0E0E0", "icon": "🌑" },
-    { "label": "simple-timekeeping.moonPhase.waxingCrescent", "color": "#F0F0F0", "icon": "🌒" },
-    { "label": "simple-timekeeping.moonPhase.firstQuarter", "color": "#FAFAFA", "icon": "🌓" },
-    { "label": "simple-timekeeping.moonPhase.waxingGibbous", "color": "#FFFFF0", "icon": "🌔" },
-    { "label": "simple-timekeeping.moonPhase.full", "color": "#FFFFCC", "icon": "🌕" },
-    { "label": "simple-timekeeping.moonPhase.waningGibbous", "color": "#FFF8DC", "icon": "🌖" },
-    { "label": "simple-timekeeping.moonPhase.lastQuarter", "color": "#F5F5F5", "icon": "🌗" },
-    { "label": "simple-timekeeping.moonPhase.waningCrescent", "color": "#ECECEC", "icon": "🌘" },
+    { 'label': 'simple-timekeeping.moonPhase.new', 'color': '#E0E0E0', 'icon': '🌑' },
+    { 'label': 'simple-timekeeping.moonPhase.waxingCrescent', 'color': '#F0F0F0', 'icon': '🌒' },
+    { 'label': 'simple-timekeeping.moonPhase.firstQuarter', 'color': '#FAFAFA', 'icon': '🌓' },
+    { 'label': 'simple-timekeeping.moonPhase.waxingGibbous', 'color': '#FFFFF0', 'icon': '🌔' },
+    { 'label': 'simple-timekeeping.moonPhase.full', 'color': '#FFFFCC', 'icon': '🌕' },
+    { 'label': 'simple-timekeeping.moonPhase.waningGibbous', 'color': '#FFF8DC', 'icon': '🌖' },
+    { 'label': 'simple-timekeeping.moonPhase.lastQuarter', 'color': '#F5F5F5', 'icon': '🌗' },
+    { 'label': 'simple-timekeeping.moonPhase.waningCrescent', 'color': '#ECECEC', 'icon': '🌘' },
   ]
 
   const moon = ui.simpleTimekeeping.moons[moonIndex]
