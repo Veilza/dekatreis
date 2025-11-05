@@ -90,6 +90,8 @@ function isSimpleTimekeepingEnabled () {
 }
 
 function setMoonlight (currentHour) {
+  if (!game.scenes.current) return
+
   // Set the global Darkness color to the color of the current moon, depending on the time.
   if (currentHour >= 20) {
     // Shift to red moon

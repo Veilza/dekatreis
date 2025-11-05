@@ -15,10 +15,16 @@
     "verified": "13.350"
   },
   "esmodules": [
-    "scripts/simple-timekeeping/simpletimekeeping-integration.js"
+    "scripts/main.js"
   ],
   "styles": [
     "styles/dekatreis.css"
+  ],
+  "media": [
+    {
+      "type": "setup",
+      "url": "modules/dekatreis/assets/images/Banner.jpg"
+    }
   ],
   "packFolders": [
     {
@@ -175,6 +181,7 @@
         "compatibility": {}
       }
     ],
+    "recommended": [],
     "requires": [
       {
         "id": "fxmaster",
@@ -185,8 +192,20 @@
         "id": "simple-timekeeping",
         "type": "module",
         "compatibility": {}
+      },
+      {
+        "id": "tidbits",
+        "type": "module",
+        "compatibility": {}
+      },
+      {
+        "id": "lib-wrapper",
+        "type": "module",
+        "compatibility": {}
       }
-    ]
+    ],
+    "conflicts": [],
+    "flags": {}
   },
   "languages": [
     {

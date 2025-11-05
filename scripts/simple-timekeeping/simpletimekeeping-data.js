@@ -8,13 +8,14 @@ export const simpleTimekeepingData = {
     "use24HourClock": true,
     "useCustomMoons": true,
     "useFullWidth": false,
+    "moonAutomation": false,
     "latitude": 7,
     "hueIntensity": 0.3,
     "dawn": 0.23,
     "dusk": 0.77,
     "hideExpired": true,
     "journalEntryEvents": "SimpleTimekeeping",
-    "darknessSync": "sync",
+    "darknessSync": "darknessOnly",
 
     // Time configuration
     "secondsPerRealSecond": 10,
