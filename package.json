@@ -10,7 +10,8 @@
     "conv-items": "fvtt package unpack -n Items --inputDirectory ./packs/ --outputDirectory ./packs/unpacked/_items && fvtt package pack -n Items --inputDirectory ./packs/unpacked/_items --outputDirectory ./packs --nedb",
     "conv-npc-handouts": "fvtt package unpack -n NPC-Handouts --inputDirectory ./packs/ --outputDirectory ./packs/unpacked/_npchandouts && fvtt package pack -n NPC-Handouts --inputDirectory ./packs/unpacked/_npchandouts --outputDirectory ./packs --nedb",
     "conv-player-options": "fvtt package unpack -n Player-Options --inputDirectory ./packs/ --outputDirectory ./packs/unpacked/_playeroptions && fvtt package pack -n Player-Options --inputDirectory ./packs/unpacked/_playeroptions --outputDirectory ./packs --nedb",
-    "conv-world-import": "fvtt package unpack -n World-Import --inputDirectory ./packs/ --outputDirectory ./packs/unpacked/_worldimport && fvtt package pack -n World-Import --inputDirectory ./packs/unpacked/_worldimport --outputDirectory ./packs --nedb"
+    "conv-world-import": "fvtt package unpack -n World-Import --inputDirectory ./packs/ --outputDirectory ./packs/unpacked/_worldimport && fvtt package pack -n World-Import --inputDirectory ./packs/unpacked/_worldimport --outputDirectory ./packs --nedb",
+    "generate-release": "node scripts/generate-release-zip.js"
   },
   "browserslist": [
     "last 3 versions"
@@ -23,6 +24,7 @@
     "eslint": "^9.39.1",
     "eslint-plugin-hbs": "^1.0.3",
     "eslint-plugin-import": "^2.32.0",
-    "eslint-plugin-prettier": "^5.5.4"
+    "eslint-plugin-prettier": "^5.5.4",
+    "archiver": "^7.0.1"
   }
 }
