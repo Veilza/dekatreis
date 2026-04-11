@@ -18,3 +18,6 @@ packs/*
 # Old Graphics
 assets/images/old/
 *.zip
+
+# Lock file
+*.lock
