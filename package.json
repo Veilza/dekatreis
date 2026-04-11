@@ -19,6 +19,10 @@
   "license": "ORC",
   "private": false,
   "devDependencies": {
-    "@foundryvtt/foundryvtt-cli": "^1.0.2"
+    "@foundryvtt/foundryvtt-cli": "^1.0.2",
+    "eslint": "^9.39.1",
+    "eslint-plugin-hbs": "^1.0.3",
+    "eslint-plugin-import": "^2.32.0",
+    "eslint-plugin-prettier": "^5.5.4"
   }
 }
