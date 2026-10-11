@@ -45,7 +45,8 @@
         "token-page",
         "party-token",
         "items",
-        "actors"
+        "actors",
+        "location-handouts"
       ],
       "color": "#700067"
     }
@@ -121,6 +122,17 @@
       "label": "World Import",
       "path": "packs/world-import",
       "type": "Adventure",
+      "system": "pf2e",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "location-handouts",
+      "label": "Location Handouts",
+      "path": "packs/location-handouts",
+      "type": "JournalEntry",
       "system": "pf2e",
       "ownership": {
         "PLAYER": "OBSERVER",
